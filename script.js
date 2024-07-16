@@ -48,8 +48,6 @@ function throttle(cb, delay=1000){
 function debounce(cb, delay=1000){
     let timeout
     return(...args)=>{
-        console.log(timeout,"timeout")
-        console.log(...args)
         clearTimeout(timeout)
        timeout = setTimeout(()=>{
             cb(...args)
